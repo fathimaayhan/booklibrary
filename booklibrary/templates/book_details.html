@@ -1,0 +1,11 @@
+{% extends 'admin.html' %}
+{% load static %}
+{% block content %}
+    <div>
+    <h1>Book Details</h1>
+    <h1>{{books.title}}</h1>
+    <h2>author :{{books.author}} </h2>
+    <h2>price : {{books.price}}</h2>
+    <img src="{{books.image.url}}">
+    </div>
+{% endblock %}

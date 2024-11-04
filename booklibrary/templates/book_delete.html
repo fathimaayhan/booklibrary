@@ -1,0 +1,12 @@
+{% extends 'admin.html' %}
+{% load static %}
+{% block content %}
+    <div>
+        <p>Are you sure you want to delete"{{book.delete}}" </p>
+    <form method="POST">
+         {% csrf_token %}
+       <button type="submit"id="button1">Delete</button>
+    </form><br>
+    <a href="{% url 'book_list' %}"id="cancel">Cancel</a>
+    </div>
+{% endblock %}

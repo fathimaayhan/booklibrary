@@ -1,0 +1,12 @@
+{% extends 'admin.html' %}
+{% load static %}
+{% block content %}
+    <div>
+        <h2>Edit Book</h2>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">submit</button>
+    </form>
+    </div>
+ {% endblock %}
